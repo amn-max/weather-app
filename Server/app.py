@@ -5,6 +5,7 @@ from urllib.request import urlopen
 from flask_cors import CORS
 
 app = Flask(__name__)
+api = Api(app)
 CORS(app)
 
 MAIN_URL = "http://api.openweathermap.org/data/2.5/find"

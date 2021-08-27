@@ -15,7 +15,7 @@ import { MdGpsFixed } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import db from "../firebase";
 import { useStateValue } from "../StateProvider";
-const API_URL = "http://127.0.0.1:5000/";
+const API_URL = "https://flask-weather-app-9.herokuapp.com/";
 
 const Main = () => {
   const [weatherData, setWeatherData] = useState(null);

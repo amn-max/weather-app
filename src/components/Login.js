@@ -60,6 +60,7 @@ const Login = () => {
           <InputGroup style={{ margin: 10 }}>
             <InputGroup.Text>email</InputGroup.Text>
             <FormControl
+              type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               aria-label="Default"
@@ -69,6 +70,7 @@ const Login = () => {
           <InputGroup style={{ margin: 10 }}>
             <InputGroup.Text>password</InputGroup.Text>
             <FormControl
+              type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               aria-label="Default"

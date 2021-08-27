@@ -9,7 +9,7 @@ import { useStateValue } from "../StateProvider";
 import { Link } from "react-router-dom";
 const mailFormat =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-const passw = /^[A-Za-z]\w{7,14}$/;
+const passw = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 const Auth = () => {
   const [{}, dispatch] = useStateValue();
   const [email, setEmail] = useState("");
@@ -48,7 +48,7 @@ const Auth = () => {
             })
             .then(async (docRef) => {
               console.log("Document written");
-              history.push("/");
+              history.push("/main");
               await localStorage.setItem("user", userCred.user);
             })
             .catch((error) => {
@@ -82,6 +82,7 @@ const Auth = () => {
           <InputGroup style={{ margin: 10 }}>
             <InputGroup.Text>email</InputGroup.Text>
             <FormControl
+              type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               aria-label="Default"
@@ -92,6 +93,7 @@ const Auth = () => {
             <InputGroup.Text>password</InputGroup.Text>
             <FormControl
               value={password}
+              type="password"
               onChange={(e) => setPassword(e.target.value)}
               aria-label="Default"
               aria-describedby="inputGroup-sizing-default"
