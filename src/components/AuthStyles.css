@@ -1,0 +1,28 @@
+.auth {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth__con {
+  background-color: white;
+  height: 470px;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 4px;
+  filter: drop-shadow(1px 1px 1px gray);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.auth__form {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

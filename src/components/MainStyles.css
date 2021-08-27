@@ -1,0 +1,146 @@
+.main {
+  min-height: 85vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+}
+
+button {
+  border: none;
+  background: aqua;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.output {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+h2 {
+  margin: 0;
+}
+
+.val-con > h2 {
+  font-size: 1em;
+}
+
+.main__right {
+  height: 300px;
+  padding: 10px;
+  width: 600px;
+  position: absolute;
+  z-index: 100;
+  bottom: 5px;
+  right: 0;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main__right > * {
+  color: white;
+}
+
+button {
+  margin: 4px;
+}
+
+.serach_close {
+  background-color: white;
+  padding: 7px 10px;
+  margin: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.val-con > p {
+  font-size: 0.8em;
+}
+
+.val-con {
+  border: 1px solid gray;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 4px;
+  margin: 10px;
+  align-items: center;
+  padding: 10px;
+}
+
+.val-con h2,
+p {
+  margin: 0px;
+}
+
+.auto-complete {
+  position: absolute;
+  top: 39px;
+  left: 86px;
+  background-color: white;
+  z-index: 10;
+  overflow-y: scroll;
+  height: 160px;
+}
+
+.auto-complete > * {
+  color: black !important;
+}
+
+.auto-complete > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.auto-complete > ul > li {
+  padding: 10px;
+}
+.auto-complete > ul > li:hover {
+  background-color: aqua;
+  cursor: pointer;
+}
+
+.auto-complete > a {
+  padding: 10px;
+}
+
+@media (max-width: 1050px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .main__right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 712px) {
+  .val-con {
+    margin: 0;
+  }
+
+  .main__right > * {
+    font-size: 12px;
+  }
+}
