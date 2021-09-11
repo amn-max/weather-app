@@ -123,7 +123,7 @@ const Main = () => {
   return (
     <div className="main">
       <div className="leaflet-container">
-        <MapContainer center={[lon, lat]} zoom={5} scrollWheelZoom={false}>
+        <MapContainer center={[lon, lat]} zoom={5} scrollWheelZoom={true}>
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
